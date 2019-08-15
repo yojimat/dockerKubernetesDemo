@@ -1,0 +1,19 @@
+{
+  "name": "visits",
+  "version": "1.0.0",
+  "description": "Projeto para tutorial do Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "redis": "2.8.0"
+  },
+  "keywords": [
+    "Docker",
+    "Node"
+  ],
+  "author": "Vinicius Neves",
+  "license": "ISC"
+}

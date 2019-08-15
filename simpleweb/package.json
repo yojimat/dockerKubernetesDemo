@@ -1,0 +1,14 @@
+{
+  "name": "simpleweb",
+  "version": "1.0.0",
+  "description": "Aplicativo para tutorial do Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Vinicius Neves",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

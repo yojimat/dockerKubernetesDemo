@@ -1,0 +1,28 @@
+-------Docker runs/Modelos----------------------------------------------------------------------------------
+
+docker run -u root --rm -d -p 8080:8080 -p 50000:50000 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock  --name jenkinsServer jenkins/jenkins
+
+docker run -it -p 8000:80 --name AspNetServer microsoft/aspnet
+
+docker run --detach --hostname gitlab.horus.com --publish 443:443 --publish 80:80 --publish 2222:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab --volume /srv/gitlab/logs:/var/log/gitlab --volume /srv/gitlab/data:/var/opt/gitlab gitlab/gitlab-ce:latest
+
+--------------------------------------------------------------------------------------------------------
+Comandos utéis
+
+-docker system prune 
+Útil para deletar todos containers parados.
+
+-docker logs [opções] [container]
+-docker kill/stop
+-docker create/start
+-docker exec -it [comando shell/bash]
+-docker run --publish [porta local]:[porta container] -v [path] -v $(pwd):[path] -it [container] [comando!]
+O comando $(pwd) significa "present working directory" para sistemas operacionais linux.
+O segundo mapeamento com tag "-v" e ":", no modelo, fala para o docker mapear todo "pwd" para o caminho escolhido no container.
+Já no primeiro mapeamento, o comando diz para ignorar o mapeamento para o caminho escolhido, ex: "/app/node_modules".
+
+-docker build --tag [nomeAutor/nomeImagem:versão] -f [DockerfileName] .
+-docker-compose up --build --detach
+-docker-compose down
+-docker-compose ps 
+Procura no diretorio atual um docker-compose.yml, caso não ache retorna erro.
