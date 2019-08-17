@@ -14,7 +14,7 @@ RUN npm install
 
 #Neste projeto não precisamos deste comando COPY, quando rodamos ele em produção. 
 #Por causa que estamos mapeando os arquivos do host/local em que o container se encontra.
-#COPY . .
+COPY . .
 
 #Comando que é executado quando container eh inicializado
 CMD ["npm", "run", "start"]
